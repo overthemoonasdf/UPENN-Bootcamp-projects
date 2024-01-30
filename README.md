@@ -5,19 +5,19 @@ You’ll learn from skilled instructors and gain real-world experience by collab
 
 
 
-Networking:
+**Networking:**
 
 Packet Analysis
 
 Wireshark
 
-Systems:
+**Systems:**
 
 Windows and Linux Administration Techniques
 
 Windows and Linux Hardening
 
-Cybersecurity:
+**Cybersecurity:**
 
 Secure Network Design and Architecture
 
@@ -31,7 +31,7 @@ Identity and Access Management
 
 Cloud Security
 
-Ethical Hacking and Penetration:
+**Ethical Hacking and Penetration:**
 
 Kali Linux
 
@@ -43,7 +43,7 @@ Burp Suite
 
 Web Vulnerabilities and Security
 
-Cybersecurity Careers:
+**Cybersecurity Careers:**
 
 Digital Forensics Methods
 
@@ -53,7 +53,7 @@ Vulnerability Assessment
 
 Security Operations and Analytics
 
-Programming and Scripting:
+**Programming and Scripting:**
 
 Bash Scripting
 
