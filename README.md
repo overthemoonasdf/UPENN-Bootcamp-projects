@@ -1,60 +1,46 @@
-# UPENN-Bootcamp-projects
-At Penn Cybersecurity Boot Camp, participants get hands-on training in networking, systems, web technologies, databases, and defensive and offensive cybersecurity. You will also learn methods, techniques, and best practices for accurately conveying the severity of the risks facing an organization’s security posture.
+## Homework File: Cloud Security
 
-You’ll learn from skilled instructors and gain real-world experience by collaborating with your peers. Through hands-on application, you’ll gain the confidence you need to tap into the industry. The curriculum* will dive into the foundational skills for cybersecurity, including:
+### Background
 
+- During the last week, you created a highly available web server for XCorp's Red Team to use for testing and training.
 
+- Your lead cloud administrator has asked for a diagram of the Network you created to keep for documentation and company records.
 
-**Networking:**
+- Your task: Use [draw.io](https://app.diagrams.net/) to create a detailed diagram of your cloud infrastructure.
 
-Packet Analysis
+### Cloud Recap
 
-Wireshark
+When you're finished completing all the activities in cloud week, you should have:
+- A total of 3 VMs running DVWA.
 
-**Systems:**
+- All 3 VMs receiving traffic from your load balancer.
 
-Windows and Linux Administration Techniques
+If you did not setup the 3rd (optional) VM, you should have:
+- A total of 2 VMs running DVWA
 
-Windows and Linux Hardening
+- Both VMs receiving traffic from your load balancer.
 
-**Cybersecurity:**
+You can complete this homework with either 2 or 3 VMs.
 
-Secure Network Design and Architecture
+### Your Goal
 
-Risk Management
+When you are finished with this assignment, you should have a network diagram that shows your entire cloud setup, including your Ansible jump box and the Docker containers running on each VM.
 
-Cryptography
+This document can be used as part of a portfolio to demonstrate your ability.
 
-Vulnerability Assessment
+### Instructions
 
-Identity and Access Management
+Use a free account at [draw.io](https://app.diagrams.net/) to diagram the entire cloud network you have created.
 
-Cloud Security
+- Your diagram should show the following:
+    - Azure resource group
+    - Virtual network with IP address range
+    - Subnet range
+    - Flow of specific traffic (e.g., HTTP, SSH)
+    - Security group blocking traffic
+    - Load balancer
+    - All 4 VMs that you have launched
+    - Where Docker and Ansible are deployed
 
-**Ethical Hacking and Penetration:**
-
-Kali Linux
-
-Metasploit
-
-Hashcat
-
-Burp Suite
-
-Web Vulnerabilities and Security
-
-**Cybersecurity Careers:**
-
-Digital Forensics Methods
-
-Penetration Testing
-
-Vulnerability Assessment
-
-Security Operations and Analytics
-
-**Programming and Scripting:**
-
-Bash Scripting
-
-PowerShell Scripting
+---
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
