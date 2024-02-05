@@ -1,60 +1,147 @@
-# UPENN-Bootcamp-projects
-At Penn Cybersecurity Boot Camp, participants get hands-on training in networking, systems, web technologies, databases, and defensive and offensive cybersecurity. You will also learn methods, techniques, and best practices for accurately conveying the severity of the risks facing an organization’s security posture.
+## Week 21 Homework: Digital Forensics
 
-You’ll learn from skilled instructors and gain real-world experience by collaborating with your peers. Through hands-on application, you’ll gain the confidence you need to tap into the industry. The curriculum* will dive into the foundational skills for cybersecurity, including:
+In this week's assignment, you will continue to work with your group to continue the final report you began in class. The instructions are included here again for reference. There is also a bonus activity aimed to sharpen your skills in locating and identifying data in a forensic image.
+
+### Scenario
+
+Just as in a real-world scenario, you will complete a final report to present your findings. You will work with your team to fill out the report.
+
+ - The final report should be submitted as the homework deliverable for this week. Everything your group has completed in class should be included. What you do not finish today can be continued at home.
+
+ - Use the [Final Case Report](https://docs.google.com/document/d/1H528_nPqhfp_eOCzvyviwx5U3M1NiPTGtIFaoQoANbY/edit#heading=h.w4pkinqwxqi8) Google Doc template to complete your report. Make a copy and be sure that each student has editing access. This will allow everyone in the group to access and work on the document at the same time.
+
+  - Each group will turn in one completed report to be graded.
+
+  - Use the following resource to help guide your work:
+
+     - [iPhone Forensics - Important Files and Databases](https://docs.google.com/document/d/10CWGqTvu09mrSn7Tg7xoKNWBrjeW1wCmXoqB58xYr0k/edit#)
+
+### Lab Environnement
+
+- This homework will use the Digital Forensics - Autopsy lab in Kali Linux.
+
+- You will find the `tracy-phone-2012-07-15.final.E01` file located in the `/corpus` directory in Autopsy.
 
 
 
-**Networking:**
+### Instructions
 
-Packet Analysis
+You've examined and documented quite a bit of information from the iPhone image file. Now you will use that documentation to build a final report.
 
-Wireshark
+1. First, fill out the following evidence worksheet to document the case's WiFi and GPS locations. You will add this, along with the Correspondence Worksheet, to the final report.
 
-**Systems:**
+    - [Location Information Worksheet](https://docs.google.com/document/d/19ckQwWc2iPh7qzKVDnBAKoBS-DpVBCb2cFfAbLNrULk/edit#heading=h.x6git33zpmpj)
 
-Windows and Linux Administration Techniques
+    Your group can look for WiFi and GPS info the following directories:
 
-Windows and Linux Hardening
+     - Find information about WiFi locations in `root/Library/Caches/locationd/consolidated.db`.
 
-**Cybersecurity:**
+       - **Note:** Input GPS coordinates into Google Maps to see the locations.
 
-Secure Network Design and Architecture
+       - Refer to the image below as an example:
 
-Risk Management
+       ![Google-GPS](Images/Google-GPS.png)
 
-Cryptography
+     - Find information related to WiFi and cell tower location information in `consolidated.db`.
 
-Vulnerability Assessment
+        ![Google-GPS](Images/WiFi_Cell.png)
 
-Identity and Access Management
+2. Working in your group's copy of the report template, add content and details as indicated in each section.
 
-Cloud Security
+   - You will rely on the Locations Information and Correspondence Evidence Worksheets you've completed so far. Additionally, you can use the **iPhone Forensics - Important Files and Databases** resource to analyze and find more information to support your case, such as Voicemails and notes from the Notepad iPhone application.
 
-**Ethical Hacking and Penetration:**
+   - Be sure to add to the report the equipment and tools you used to gather and analyze the evidence.
 
-Kali Linux
+      - For example, Autopsy, the operating system (Kali Linux), text editors (Nano), etc.
 
-Metasploit
+   - When including pictures from the iPhone, please use the time stamp of the **Created time** from autopsy. 
 
-Hashcat
+ ### Submission Guidelines
 
-Burp Suite
+ - Each group should submit one version of the completed Final Case Report document.
 
-Web Vulnerabilities and Security
+----
 
-**Cybersecurity Careers:**
+### Bonus Assignment: Russian Tea Room
 
-Digital Forensics Methods
+The goal of this assignment is to sharpen your skills in locating and identifying data in a forensic image.
 
-Penetration Testing
+- These skills are important for tasks related to locating and decoding data, such as executable code or malicious documents embedded in images or network logs.
 
-Vulnerability Assessment
+#### Scenario: The Case of the Little Russian Tea Room
 
-Security Operations and Analytics
+- There was a fire at the Little Russian Tea Room restaurant last week, and the only thing recovered was a hard drive. To start rebuilding the business, the restaurant hired you as a forensics investigator to look at the disk image and reconstruct the menu.
 
-**Programming and Scripting:**
+- You'll be working with an EnCase image of the hard drive.
 
-Bash Scripting
+- Luckily, the English and Russian menu are both in the hard drive image. However, only the English menu and two sections of the Russian menu are readable. Your must decode several sections of the Russian menu.
 
-PowerShell Scripting
+#### Resources:
+
+The strings in the EnCase image are hex and represent the UTF-16 format. You'll need to be familiar with hex and UTF-16 encoding and decoding for this activity.
+
+  - Review this [Unicode Tutorial](https://docs.google.com/document/d/1f39Qp96t6N8eFmRipesUusw2sIfGXZv_rqEoR0byp_4/edit?usp=sharing) and the practice exercises. This review will help you locate the menus on the hard drive image.                                      
+
+Below are the files required to complete the assignment:
+
+   - [RussianTeaRoom.zip](https://drive.google.com/file/d/1JlKMetFwyvQNVl0zpNO_O8A90KWyfJH2/view?usp=sharing) (560 KB): The Autopsy case file and Encase image file.
+
+   - [menu.pdf](https://drive.google.com/file/d/1kXw3IoZKISAfAhsLiT7jiSnW0hK8aQoI/view?usp=sharing) (56.0 KB): The Little Russian Tea Room menu.
+
+   - [Google Sheets: Russian Team Room](https://docs.google.com/spreadsheets/d/1GeibalvCi0jnUKay82dSne9V9kdEuUNyOxpaAEBABiU/edit?usp=sharing)
+
+   - [Unicode-Tutorial.md](https://docs.google.com/document/d/1f39Qp96t6N8eFmRipesUusw2sIfGXZv_rqEoR0byp_4/edit?usp=sharing): Short Unicode tutorial.
+
+   The files can also be found in the `/root/autopsy-files/homework` directory in Autopsy.
+
+#### Instructions
+
+Your task is to find, decode, and document six of the menus from the hard drive image using the Unicode Cyrillic and Latin character (cipher) set.
+
+1. Launch Autopsy and select **Open Case**.
+
+   - Open the `RussianTeaRoom` folder and select `RussianTeaRoom.aut`.
+
+    - Add the `Russian-TeamRoom.E01` EnCase image file to the case.
+
+   - This is a sample of the hex data in the Autopsy `RussianTeaRoom` case file:
+
+     ![Images/hex-data.png](Images/hex-data.png)
+
+2. Use [Google Sheets: Russian Team Room](https://docs.google.com/spreadsheets/d/1GeibalvCi0jnUKay82dSne9V9kdEuUNyOxpaAEBABiU/edit?usp=sharing) to document the remaining information from the EnCase image for the investigation.
+
+3. Find and document the complete file locations for the six menu sections in the image.
+
+    - **Hint:** There may be multiple locations for the same file.
+
+4. Document the menu items in Cyrillic (e.g., бифштеке) and English (e.g.,  steak) for the two following menu sections:
+
+    - Pancakes (Menu #3)
+
+    - Meat and Fish (Menu #5)
+
+
+       - **Hint:** Use the **Hex** and **String** tabs in **Data Content** window in Autopsy to view the data.
+
+       ![String Dump](Images/string-dump.png)
+
+
+   Include in your documentation:
+
+   - Starting location in the hex dump.
+     - For example: `0x00000010`
+
+   - Hex string for menu name or menu item.
+      - For example: `00 42 00 65 00 76 00 65 00 72 00 61 00 67 00 65 00 73`
+
+   - UTF-16 escape sequence for a menu name or menu item.
+      - For example: `\u0042\u0065\u0076\u0065\u0072\u0061\u0067\u0065\u0073`
+
+
+### Submission Guidelines  
+
+- Submit the completed [Google Sheets: Russian Team Room](https://docs.google.com/spreadsheets/d/1GeibalvCi0jnUKay82dSne9V9kdEuUNyOxpaAEBABiU/edit?usp=sharing)  file.
+
+----
+
+&copy; 2020 Trilogy Education Services, a 2U Inc Brand.   All Rights Reserved.
